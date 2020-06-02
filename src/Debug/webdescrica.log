@@ -1,0 +1,15 @@
+﻿  janela1.cpp
+c:\users\lucas\documents\pyqt\webdescrica\janela1.h(4): fatal error C1083: Cannot open include file: 'QDialog': No such file or directory
+  janela2.cpp
+c:\users\lucas\documents\pyqt\webdescrica\janela2.h(4): fatal error C1083: Cannot open include file: 'QDialog': No such file or directory
+  main.cpp
+c:\users\lucas\documents\pyqt\webdescrica\mainwindow.h(4): fatal error C1083: Cannot open include file: 'QMainWindow': No such file or directory
+  mainwindow.cpp
+c:\users\lucas\documents\pyqt\webdescrica\mainwindow.h(4): fatal error C1083: Cannot open include file: 'QMainWindow': No such file or directory
+  wave.cpp
+wave.cpp(93): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+wave.cpp(162): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  C:\Program Files (x86)\Windows Kits\10\Include\10.0.10240.0\ucrt\stdio.h(205): note: see declaration of 'fopen'
+wave.cpp(274): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Generating Code...
