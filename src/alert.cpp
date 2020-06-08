@@ -19,11 +19,15 @@ alert::~alert()
 
 void alert::on_salvar_clicked()
 {
-    name=ui->texto->text();
-    //fileLocal=QFileDialog::getExistingDirectory(this,"abrir");//getOpenFileName(this,"abrir");
     result=true;
-    //fileLocal+="/"+name+".";
-   this->close();
+    name=ui->texto->text();
+    fileLocal=diretorio->diretorio_create(name);
+    ui->label->setText(fileLocal);
+    if (fileLocal!="erro"){
+        this->close();
+    }
+    this->erro();
+
 }
 
 void alert::on_cancelar_clicked()
@@ -46,3 +50,7 @@ QString alert::return_fileLocal(){
     return fileLocal;
 }
 
+void alert::erro(){
+    ui->label->setText("por favor coloque ontro nome");
+
+}

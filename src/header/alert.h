@@ -6,7 +6,7 @@
 #include <QWidget>
 //#include <QFileDialog>
 #include <iostream>
-
+#include "diretorio.h"
 
 namespace Ui {
     class alert;
@@ -29,15 +29,17 @@ public:
 
     QString return_fileLocal();
 
+    void erro();
 private slots:
     void on_salvar_clicked();
 
     void on_cancelar_clicked();
 
 private:
-    bool result;
+    bool result = true;
     QString name="dafault";
     QString fileLocal;
+    Diretorio *diretorio= new Diretorio;
 
 
     Ui::alert *ui;
