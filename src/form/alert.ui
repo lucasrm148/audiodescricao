@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>300</height>
+    <height>233</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,9 +17,9 @@
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>40</y>
+     <y>60</y>
      <width>331</width>
-     <height>41</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="font">
@@ -29,15 +29,15 @@
     </font>
    </property>
    <property name="text">
-    <string>qual o nome do projeto</string>
+    <string>Nome do Projeto:</string>
    </property>
   </widget>
   <widget class="QWidget" name="horizontalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>170</y>
-     <width>391</width>
+     <x>220</x>
+     <y>140</y>
+     <width>171</width>
      <height>81</height>
     </rect>
    </property>
@@ -61,30 +61,11 @@
   <widget class="QLineEdit" name="texto">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>90</y>
-     <width>391</width>
-     <height>41</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
      <x>10</x>
-     <y>140</y>
-     <width>331</width>
+     <y>90</y>
+     <width>381</width>
      <height>41</height>
     </rect>
-   </property>
-   <property name="font">
-    <font>
-     <family>Candara</family>
-     <pointsize>11</pointsize>
-    </font>
-   </property>
-   <property name="text">
-    <string>voce deseja salva?</string>
    </property>
   </widget>
  </widget>

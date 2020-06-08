@@ -15,7 +15,7 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked()
+void MainWindow::on_novoProj_clicked()
 {
     alert1->show();
     alert1->exec();
@@ -26,7 +26,7 @@ void MainWindow::on_pushButton_clicked()
     form1->show();
 }
 
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::abrirProj()
 {
     app->diretorio_create(name);
 

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1304</width>
-    <height>757</height>
+    <width>1290</width>
+    <height>726</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,10 +16,10 @@
   <widget class="QGroupBox" name="groupBox">
    <property name="geometry">
     <rect>
-     <x>930</x>
-     <y>10</y>
+     <x>1070</x>
+     <y>20</y>
      <width>181</width>
-     <height>641</height>
+     <height>601</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -28,7 +28,7 @@ background-color:rgb(227, 227, 227)
 }</string>
    </property>
    <property name="title">
-    <string>itens</string>
+    <string>Mídias</string>
    </property>
    <widget class="QListWidget" name="listWidget_4">
     <property name="geometry">
@@ -36,7 +36,7 @@ background-color:rgb(227, 227, 227)
       <x>0</x>
       <y>20</y>
       <width>181</width>
-      <height>581</height>
+      <height>541</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -61,23 +61,23 @@ background-color:rgb(245, 245, 245)
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>600</y>
+      <y>560</y>
       <width>181</width>
       <height>41</height>
      </rect>
     </property>
     <property name="text">
-     <string>caregar</string>
+     <string>Adicionar </string>
     </property>
    </widget>
   </widget>
   <widget class="QWidget" name="tela" native="true">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>10</y>
-     <width>691</width>
-     <height>631</height>
+     <x>260</x>
+     <y>20</y>
+     <width>791</width>
+     <height>551</height>
     </rect>
    </property>
    <property name="baseSize">
@@ -104,162 +104,22 @@ background-color:rgb(184, 184, 184)
   <widget class="QPushButton" name="sair">
    <property name="geometry">
     <rect>
-     <x>1120</x>
-     <y>0</y>
+     <x>1190</x>
+     <y>670</y>
      <width>61</width>
      <height>28</height>
     </rect>
    </property>
    <property name="text">
-    <string>sair</string>
+    <string>Voltar</string>
    </property>
-  </widget>
-  <widget class="QWidget" name="verticalLayoutWidget_2">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>10</y>
-     <width>188</width>
-     <height>681</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout_2">
-    <item>
-     <widget class="QLabel" name="label">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="baseSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;descrição &lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-style:italic;&quot;&gt;elementar &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-      <property name="margin">
-       <number>8</number>
-      </property>
-      <property name="indent">
-       <number>6</number>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="cenas">
-      <property name="font">
-       <font>
-        <family>Candara</family>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true"/>
-      </property>
-      <property name="text">
-       <string>cenas</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="cenarios">
-      <property name="font">
-       <font>
-        <family>Candara</family>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>cenarios</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="personagem">
-      <property name="font">
-       <font>
-        <family>Candara</family>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>personagem</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QLabel" name="label_2">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="baseSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>15</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;descrição &lt;/span&gt;&lt;span style=&quot; font-size:14pt; font-weight:600; font-style:italic;&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600; font-style:italic;&quot;&gt;elementar &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-      </property>
-      <property name="margin">
-       <number>8</number>
-      </property>
-      <property name="indent">
-       <number>6</number>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="sinopse">
-      <property name="font">
-       <font>
-        <family>Candara</family>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <property name="text">
-       <string>sinopse</string>
-      </property>
-     </widget>
-    </item>
-    <item>
-     <widget class="QPushButton" name="titulo">
-      <property name="font">
-       <font>
-        <family>Candara</family>
-        <pointsize>16</pointsize>
-        <weight>50</weight>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="text">
-       <string>titulo</string>
-      </property>
-     </widget>
-    </item>
-   </layout>
   </widget>
   <widget class="QWidget" name="horizontalLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>230</x>
-     <y>640</y>
-     <width>691</width>
+     <x>260</x>
+     <y>570</y>
+     <width>791</width>
      <height>51</height>
     </rect>
    </property>
@@ -290,21 +150,192 @@ background-color:rgb(184, 184, 184)
     </item>
    </layout>
   </widget>
+  <widget class="QLabel" name="label">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>70</y>
+     <width>186</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="baseSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DESCRIÇÃO &lt;/p&gt;&lt;p&gt;ELEMENTAR&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="margin">
+    <number>8</number>
+   </property>
+   <property name="indent">
+    <number>6</number>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cenas">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>160</y>
+     <width>186</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Candara</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <property name="text">
+    <string>Cena</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="cenarios">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>210</y>
+     <width>186</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Candara</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Cenário</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="personagem">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>260</y>
+     <width>186</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Candara</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Personagem</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="sinopse">
+   <property name="geometry">
+    <rect>
+     <x>230</x>
+     <y>650</y>
+     <width>186</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Candara</family>
+     <pointsize>16</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Sinopse</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="titulo">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>650</y>
+     <width>186</width>
+     <height>33</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Candara</family>
+     <pointsize>16</pointsize>
+     <weight>50</weight>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Título</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>540</y>
+     <width>191</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="baseSize">
+    <size>
+     <width>0</width>
+     <height>0</height>
+    </size>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>15</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;DESCRIÇÃO&lt;/p&gt;&lt;p&gt;COMPLEMENTAR &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="margin">
+    <number>8</number>
+   </property>
+   <property name="indent">
+    <number>6</number>
+   </property>
+  </widget>
   <zorder>tela</zorder>
   <zorder>groupBox</zorder>
   <zorder>sair</zorder>
-  <zorder>verticalLayoutWidget_2</zorder>
   <zorder>horizontalLayoutWidget</zorder>
+  <zorder>label</zorder>
+  <zorder>cenas</zorder>
+  <zorder>cenarios</zorder>
+  <zorder>personagem</zorder>
+  <zorder>sinopse</zorder>
+  <zorder>titulo</zorder>
+  <zorder>label_2</zorder>
  </widget>
  <tabstops>
-  <tabstop>personagem</tabstop>
-  <tabstop>cenas</tabstop>
-  <tabstop>titulo</tabstop>
-  <tabstop>cenarios</tabstop>
   <tabstop>sair</tabstop>
   <tabstop>stop</tabstop>
   <tabstop>listWidget_4</tabstop>
-  <tabstop>sinopse</tabstop>
  </tabstops>
  <resources/>
  <connections>
