@@ -2,51 +2,48 @@
 #include <QString>
 #include <iostream>
 #include <string>
+#include <windows.h>
+#include <string>
+#include <fileapi.h>
 using namespace std;
 
-diretorio::diretorio()
+Diretorio::Diretorio()
 {
 
 }
-QString diretorio::diretorio_create(QString name){
-    QString local=" \"C:\\Users\\lucas\\Desktop\\teste\\audiodescrição\\"+name+"\\\"";
-    //local.toStdString()
-    string locale_text = local.toLocal8Bit().constData();
-    //system(("mkdir"+locale_text).c_str());
-    diretorio::item_past(name);
-    local="C:/Users/lucas/Desktop/teste/"+name;
+QString Diretorio::diretorio_create(QString name){
+    QString local="erro";
+    if(Diretorio::item_past(name)){
+        local="C:/Users/lucas/Desktop/teste/"+name;
+    }
+
     return local;
 }
-bool diretorio::item_past(QString name){
-    bool oi=true;
-    system("XCOPY C:\\Users\\lucas\\Desktop\\teste\\pymix/E/I c:\\Users\\lucas\\Desktop\\teste\\audiodescricao\\oi2");
-return oi;
-}
-/*
- *
-Bom, por aqui fiz assim:
 
-criei uma pasta vazia para o destino e consegui copiar tudo o que tinha na pasta
-
-de origem inclusive subpastas para ela deste jeito:
-
-#include <conio.h>
-
-#include <stdio.h>
-
-#include <windows.h>
-
-int main(){
-
-system("XCOPY C:\\UDev/E/S G:\\UDev"); // Aqui UDev é uma pasta de programa
-
-// G é o meu pendrive, e UDev em G foi uma pasta vazia criada para receber os arquivos da pasta de origem,
-
-//copiou tudo inclusive as subpastas,funciona perfeitamente.
-
-getche();
-
+bool Diretorio::item_past(QString name){
+    QString diretorio ="c:\\users\\lucas\\desktop\\teste\\audiodescricao\\"+name;
+     bool var=false;
+     if (DirectoryExists(diretorio)){
+          QString local=" C:\\Users\\lucas\\Desktop\\teste\\pymix/E/I "+diretorio;
+          string locale_text = local.toLocal8Bit().constData();
+          var =true;
+     }
+     printf("%s",(var)?"true":"false");
+return var;
+//ao copiar o arquivo caso a pagina nao exista ela e criada;
+//C:\Listening TV Pt-br alterado-20200602T193402Z-001\Listening TV Pt-br alterado\ListenTV\ListeningTV
 }
 
-é isto...
-*/
+bool Diretorio::DirectoryExists(QString path)
+{
+    QString test= "cd "+path;
+    string test_d=test.toLocal8Bit().constData();
+     return system((test_d).c_str());
+// função que testa se o diretorio ja existe ou nao caso nao exista retorna false  teste e feito pelo cd do smd;
+}
+
+
+
+
+
+//system(("mkdir"+locale_text).c_str())//cria uma pasta vazia mais n precisa ja que o comp cria a pasta;

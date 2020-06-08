@@ -19,7 +19,8 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
      QString name;
-     diretorio *app= new diretorio();
+     QString local;
+     Diretorio *diretorio= new Diretorio();
 public slots:
 
 private slots:

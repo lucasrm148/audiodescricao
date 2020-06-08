@@ -51,6 +51,7 @@ janela2::~janela2()
     delete ui;
 }
     int clicks=0;
+
 void janela2::on_gravar_clicked()
 {
     if(clicks==0){
@@ -63,9 +64,6 @@ void janela2::on_gravar_clicked()
         bool variavel=form->return_result(); 
         if (variavel){
              name=form->return_name();
-             ui->teste->setText(name);
-             local=form->return_fileLocal();
-
              ListAudioLocal.insert(i,local);
              ListAudioName+=name;//ListAudioName.insert(i++,name);
              listAudioDuration.insert(i++,AudioRecorder->duration());
