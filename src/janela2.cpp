@@ -1,7 +1,6 @@
 #include "header/janela2.h"
 #include "ui_janela2.h"
 #include "header/alert.h"
-
 #include <QtMultimediaWidgets>
 #include <QVideoWidget>
 #include <QAudioRecorder>
@@ -10,7 +9,7 @@
 #include <iostream>
 using namespace std;
 
-janela2::janela2(QWidget *parent,QString njanela ,QString filename):
+janela2::janela2(QWidget *parent,QString njanela ,QString filename, QString filelocal):
     QDialog(parent),
     ui(new Ui::janela2)
 {
@@ -23,13 +22,15 @@ janela2::janela2(QWidget *parent,QString njanela ,QString filename):
     AudioRecorder->setOutputLocation(QUrl :: fromLocalFile(local));
     AudioRecorder->setAudioSettings(AudioSettings);
 
+    filediretorio=filelocal;
+    filename="";
 
-     mMediaPlayer=new QMediaPlayer(this);
-     mVideoWidget = new QVideoWidget(this);
+    mMediaPlayer=new QMediaPlayer(this);
+    mVideoWidget = new QVideoWidget(this);
 
-     mMediaPlayer->setVideoOutput(mVideoWidget);
-     mVideoWidget->setGeometry(130,10,841,441);
-     mVideoWidget->setStyleSheet("* { background-color: rgb(50, 50, 50); }");
+    mMediaPlayer->setVideoOutput(mVideoWidget);
+    mVideoWidget->setGeometry(130,10,841,441);
+    mVideoWidget->setStyleSheet("* { background-color: rgb(50, 50, 50); }");
 
      ui->teste->setText(njanela);
      layout();
@@ -55,29 +56,17 @@ janela2::~janela2()
 void janela2::on_gravar_clicked()
 {
     if(clicks==0){
-         AudioRecorder->record();
-         clicks=1;
-    }else{
-        AudioRecorder->pause();
-        form->exec();
-        form->show();
-        bool variavel=form->return_result(); 
-        if (variavel){
-             name=form->return_name();
-             ListAudioLocal.insert(i,local);
-             ListAudioName+=name;//ListAudioName.insert(i++,name);
-             listAudioDuration.insert(i++,AudioRecorder->duration());
-             AudioRecorder->setOutputLocation(QUrl :: fromLocalFile(local));
-             AudioRecorder->stop();
-             std::cout << "adicionado"<< std::endl;
-
-        }else{
-
-            AudioRecorder->stop();
-        }
-
+       AudioRecorder->record();
+       clicks=1;
+    }else{   
+        AudioRecorder->stop();
+        ListAudioLocal.insert(i,local);
+        ListAudioName+=name;
+        //ListAudioName.insert(i++,name);
+        listAudioDuration.insert(i++,AudioRecorder->duration());
+        AudioRecorder->setOutputLocation(QUrl :: fromLocalFile(local));
+        AudioRecorder->stop();
         clicks=0;
-
     }
 }
 
@@ -94,4 +83,12 @@ void janela2::on_pause_clicked()
 void janela2::on_pushButton_clicked()
 {
 
+}
+
+void janela2::on_espaso_clicked()
+{
+    timer= new time1(this);
+    timer->show();
+    timer->exec();
+    QString space=timer->returnTime();
 }

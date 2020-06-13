@@ -30,7 +30,9 @@ void MainWindow::on_novoProj_clicked()
     }
 }
 
-void MainWindow::abrirProj()
+void MainWindow::on_abrirProj_clicked()
 {
-    diretorio->diretorio_create(name);
+    this->close();
+    form1=new janela1(this,name,local);
+    form1->show();
 }

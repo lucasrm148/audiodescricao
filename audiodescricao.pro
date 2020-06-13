@@ -20,29 +20,35 @@ LIBS += -Lpython
 
 SOURCES += \
     src/alert.cpp \
+    src/carregar.cpp \
     src/diretorio.cpp \
     src/janela1.cpp \
     src/janela2.cpp \
     src/main.cpp \
     src/mainwindow.cpp \
-    src/mix_class.cpp
+    src/mix_class.cpp \
+    src/time.cpp
 
 HEADERS += \
     src/header/StdAfx.h \
     src/header/alert.h \
+    src/header/carregar.h \
     src/header/diretorio.h \
     src/header/janela1.h \
     src/header/janela2.h \
     src/header/mainwindow.h \
-    src/header/mix_class.h
+    src/header/mix_class.h \
+    src/header/time.h
 
 FORMS += \
     src/form/1untitled.ui \
     src/form/2untitled.ui \
     src/form/alert.ui \
+    src/form/carregar.ui \
     src/form/janela1.ui \
     src/form/janela2.ui \
-    src/form/mainwindow.ui
+    src/form/mainwindow.ui \
+    src/form/time.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

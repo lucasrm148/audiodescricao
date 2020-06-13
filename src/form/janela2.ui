@@ -215,14 +215,27 @@ background-color:rgb(221, 221, 221)
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>240</y>
+     <x>990</x>
+     <y>360</y>
      <width>93</width>
      <height>28</height>
     </rect>
    </property>
    <property name="text">
-    <string>PushButton</string>
+    <string>salvar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="espaso">
+   <property name="geometry">
+    <rect>
+     <x>990</x>
+     <y>330</y>
+     <width>93</width>
+     <height>28</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>espaço</string>
    </property>
   </widget>
  </widget>

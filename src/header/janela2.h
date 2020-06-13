@@ -4,6 +4,7 @@
 #include <QDialog>
 #include <QWidget>
 #include "alert.h"
+#include "time.h"
 #include <list>
 #include <iostream>
 
@@ -19,12 +20,13 @@ class janela2 : public QDialog
     Q_OBJECT
 
 public:
-    explicit janela2(QWidget *parent = nullptr, QString njanela=NULL,QString filename=NULL);
+     explicit janela2(QWidget *parent = nullptr, QString njanela=NULL, QString filename="",QString filelocal="Documentos");
     ~janela2();
     QStringList ListAudioName{};
     QStringList ListAudioLocal{};
     QList< long long int> listAudioDuration;
     QString name;
+    QString filediretorio;
     QString local="audio.wav";
 
 private slots:
@@ -36,13 +38,15 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_espaso_clicked();
+
 private:
     Ui::janela2 *ui;
 
     QAudioRecorder *AudioRecorder;
     QMediaPlayer *mMediaPlayer;
     QVideoWidget *mVideoWidget;
-
+    time1 *timer;
     alert* form;
     int i=0;
 };

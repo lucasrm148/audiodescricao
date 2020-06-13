@@ -4,7 +4,7 @@
 #include <QDialog>
 #include "janela2.h"
 #include <QWidget>
-
+#include "carregar.h"
 namespace Ui {
     class janela1;
 }
@@ -18,7 +18,8 @@ class janela1 : public QDialog
 public:
     explicit janela1(QWidget *parent = nullptr,QString name="",QString local="");
     ~janela1();
-    QString filename;
+    QString filelocal;
+    QString fileload;
 private slots:
     void on_cenarios_clicked();
 
@@ -45,6 +46,7 @@ private:
     janela2 *form2;
     QMediaPlayer *mMediaPlayer;
     QVideoWidget *mVideoWidget;
+    Carregar *carregar;
 };
 
 #endif // JANELA1_H

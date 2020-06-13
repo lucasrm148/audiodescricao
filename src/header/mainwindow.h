@@ -26,7 +26,7 @@ public slots:
 private slots:
     void on_novoProj_clicked();
 
-    void abrirProj();
+    void on_abrirProj_clicked();
 
 private:
     Ui::MainWindow *ui;

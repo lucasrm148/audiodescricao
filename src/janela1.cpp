@@ -13,8 +13,14 @@ janela1::janela1(QWidget *parent,QString name,QString local) :
     mMediaPlayer=new QMediaPlayer(this);
     mVideoWidget = new QVideoWidget(this);
     mMediaPlayer->setVideoOutput(mVideoWidget);
-    mVideoWidget->setGeometry(230,10,691,631);
+    int x=ui->tela->x();
+    int y=ui->tela->y();
+    int wt=ui->tela->width();
+    int hg=ui->tela->height();
+    ui->tela->destroyed();
+    mVideoWidget->setGeometry(x,y,wt,hg);
     mVideoWidget->setStyleSheet("*{ background-color: rgb(50, 50, 50); }");
+    filelocal=local;
 
     layout();
     connect(mMediaPlayer,&QMediaPlayer::positionChanged,[&](qint64 pos ){
@@ -35,45 +41,68 @@ janela1::~janela1()
 void janela1::on_cenarios_clicked()
 {
     QString tela="cenarios";
-    form2=new janela2(this,tela,filename);
-    form2->show();
-    form2->exec();
+    Carregar *carregar=new Carregar();
+    carregar->show();
+    carregar->exec();
+    QString teste=carregar->returnfile();
+    if(teste==""){
+        form2=new janela2(this,tela,fileload,filelocal);
+        form2->show();
+        form2->exec();
+    }
 }
 
 void janela1::on_cenas_clicked()
 {
     QString tela="cenas";
-    form2=new janela2(this,tela,filename);  
-    form2->show();
-    form2->exec();
+    Carregar *carregar=new Carregar(this);
+    carregar->show();
+    carregar->exec();
+    QString teste=carregar->returnfile();
+    if(teste==""){
+        form2=new janela2(this,tela,fileload,filelocal);
+        form2->show();
+        form2->exec();
+    }
 }
-
-
 void janela1::on_personagem_clicked()
 {
     QString tela="personagem";
-    form2=new janela2(this,tela,filename);
-
-    form2->show();
-    form2->exec();
+    Carregar *carregar=new Carregar(this);
+    carregar->show();
+    carregar->exec();
+    QString teste=carregar->returnfile();
+    if(teste==""){
+        form2=new janela2(this,tela,fileload,filelocal);
+        form2->show();
+        form2->exec();
+    }
 }
 
 void janela1::on_titulo_clicked()
 {
     QString tela="titulo";
-    form2=new janela2(this,tela,filename);
-
-    form2->show();
-    form2->exec();
+    Carregar *carregar=new Carregar(this);
+    carregar->show();
+    QString teste=carregar->returnfile();
+    if(teste==""){
+        form2=new janela2(this,tela,fileload,filelocal);
+        form2->show();
+        form2->exec();
+    }
 }
 
 void janela1::on_sinopse_clicked()
 {
    QString tela="sinopse";
-   form2=new janela2(this,tela,filename);
-
-   form2->show();
-   form2->exec();
+   Carregar *carregar=new Carregar(this);
+   carregar->show();
+   QString teste=carregar->returnfile();
+   if(teste==""){
+       form2=new janela2(this,tela,fileload,filelocal);
+       form2->show();
+       form2->exec();
+   }
 }
 
 void janela1::on_play_clicked()
@@ -90,11 +119,11 @@ void janela1::on_stop_clicked()
 
 void janela1::on_caregar_clicked()
 {
-    filename=QFileDialog::getOpenFileName(this,"abrir");
-    if(filename.isEmpty()){
+    fileload=QFileDialog::getOpenFileName(this,"abrir");
+    if(fileload.isEmpty()){
         return;
     }
-   mMediaPlayer->setMedia(QUrl::fromLocalFile(filename));
+   mMediaPlayer->setMedia(QUrl::fromLocalFile(fileload));
    mMediaPlayer->setVolume(50);
     on_play_clicked();
 }
@@ -103,6 +132,3 @@ void janela1::on_slide_valueChanged(int value)
 {
     ui->slide->setValue(value);
 }
-
-
-

@@ -27,7 +27,6 @@ void alert::on_salvar_clicked()
         this->close();
     }
     this->erro();
-
 }
 
 void alert::on_cancelar_clicked()
@@ -52,5 +51,4 @@ QString alert::return_fileLocal(){
 
 void alert::erro(){
     ui->label->setText("por favor coloque ontro nome");
-
 }
